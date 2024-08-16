@@ -1,0 +1,168 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:textSize="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="AGENDA PHP"
+        android:background="#1005B3"
+
+        android:textColor="@color/white"
+        tools:ignore="MissingConstraints">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TableLayout
+            android:id="@+id/tabla1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_span="2"
+                android:text="@string/nombre"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/txtNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_span="2"
+                android:inputType="textPersonName"
+                android:textColor="@color/white">
+
+                <requestFocus />
+            </EditText>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/tel1"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="@string/tel2"
+                    android:textColor="@color/white"/>
+            </TableRow>
+
+            <TableRow>
+
+                <EditText
+                    android:id="@+id/txtTelefono1"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:textColor="@color/white"/>
+
+                <EditText
+                    android:id="@+id/txtTelefono2"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:textColor="@color/white"/>
+            </TableRow>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_span="2"
+                android:text="@string/direccion"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/txtDireccion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textPostalAddress"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_span="2"
+                android:text="@string/notas"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/txtNotas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+                android:minLines="5"
+                android:textColor="@color/white"/>
+
+            <CheckBox
+                android:id="@+id/cbxFavorito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/favorito"
+                android:textColor="@color/white"/>
+
+            <TableRow>
+
+                <Button
+                    android:id="@+id/btnLimpiar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/btn_limpiar"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1005B3"/>
+
+                <Button
+                    android:id="@+id/btnGuardar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@string/btn_guardar"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#1005B3"/>
+            </TableRow>
+
+            <Button
+                android:id="@+id/btnListar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_listar"
+                android:textColor="@color/white"
+                android:backgroundTint="#1005B3"/>
+        </TableLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
